@@ -47,7 +47,11 @@
 			<artifactId>jakarta.validation-api</artifactId>
 			<version>3.0.2</version>
 		</dependency>
-
+		<!-- Hibernate Core -->
+<!--		<dependency>-->
+<!--			<groupId>org.hibernate</groupId>-->
+<!--			<artifactId>hibernate-core</artifactId>-->
+<!--		</dependency>-->
 	</dependencies>
 
 	<build>
