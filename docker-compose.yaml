@@ -34,3 +34,4 @@ services:
     restart: always
 volumes:
   pgdata:
+    name: 'pgdata13'
