@@ -13,7 +13,7 @@ services:
     networks:
       - db-postgres
     depends_on:
-      - postgres
+      - postgres-service
     ports:
       - "8084:8080"
   postgres-service:
