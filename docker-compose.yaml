@@ -20,7 +20,7 @@ services:
       - "8080:8080"
     restart: unless-stopped
   postgres-service:
-    image: postgres:13-alpine
+    image: postgres:9.4-alpine
     container_name: postgres-service
     environment:
       POSTGRES_PASSWORD: postgres
