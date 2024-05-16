@@ -31,4 +31,9 @@ public class ProdutoServiceImpl implements ProdutoService{
     public void delete(Long id) {
         repository.deleteById(id);
     }
+
+    @Override
+    public void deleteAll() {
+        repository.deleteAll();
+    }
 }

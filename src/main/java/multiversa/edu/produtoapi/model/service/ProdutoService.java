@@ -10,4 +10,5 @@ public interface ProdutoService {
     Produto cadastrarNovoProduto(ProdutoDTO produtoDTO);
     List<Produto> buscarTodos();
     void delete(Long id);
+    void deleteAll();
 }
