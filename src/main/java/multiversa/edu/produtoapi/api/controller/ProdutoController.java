@@ -21,21 +21,18 @@ public class ProdutoController {
 
     @PostMapping("cadastrar")
     public ResponseEntity<Produto> cadastrar(@RequestBody ProdutoDTO produtoDTO){
-        log.info("Cadastrando produto");
         Produto produto = service.cadastrarNovoProduto(produtoDTO);
         return ResponseEntity.ok(produto);
     }
 
     @DeleteMapping("excluir/{id}")
     public String excluir(@PathVariable Long id){
-        log.info("Excluindo produto");
         service.delete(id);
         return "Excluido com sucesso!";
     }
 
     @GetMapping
     public List<Produto> buscarTodos(){
-        log.info("Buscando todos produtos");
         return service.buscarTodos();
     }
 
