@@ -33,5 +33,4 @@ services:
       - "5432:5432"
     restart: always
 volumes:
-  pgdata:
-    name: 'pgdata13'
+  pgdata: {}
