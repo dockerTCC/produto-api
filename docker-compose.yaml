@@ -18,7 +18,7 @@ services:
       - postgres-service
     ports:
       - "8080:8080"
-    restart: on-failure
+    restart: unless-stopped
   postgres-service:
     image: postgres:13-alpine
     container_name: postgres-service
