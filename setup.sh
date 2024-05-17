@@ -26,7 +26,7 @@ apt install maven
 mvn -v
 
 # Gerar o .jar da aplicação
-mvn clean install -DskipTests
+mvn clean install -DskipTests -Pvm
 
 #Tornar arquivo executável
 chmod +x target/produto-api-1.0-SNAPSHOT.jar
