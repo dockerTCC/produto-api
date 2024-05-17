@@ -16,7 +16,7 @@ After=network.target
 User=${USER}
 ExecStart=/usr/bin/java -jar ${JAR_PATH}
 SuccessExitStatus=143
-Restart=on-failure
+Restart=always
 RestartSec=10
 
 [Install]
