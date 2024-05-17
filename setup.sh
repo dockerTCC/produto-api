@@ -35,4 +35,6 @@ mvn clean install -DskipTests -Pvm
 #Tornar arquivo executável
 chmod +x target/produto-api-1.0-SNAPSHOT.jar
 
+chmod +x setup-service.sh && ./setup-service.sh
+
 echo "Instalação concluída com sucesso!"
