@@ -16,6 +16,25 @@
 	<properties>
 		<java.version>17</java.version>
 	</properties>
+	<profiles>
+        <profile>
+            <id>docker</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <build.profile.id>docker</build.profile.id>
+                <profileActive>docker</profileActive>
+            </properties>
+        </profile>
+        <profile>
+            <id>vm</id>
+            <properties>
+                <build.profile.id>vm</build.profile.id>
+                <profileActive>vm</profileActive>
+            </properties>
+        </profile>        
+    </profiles>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
