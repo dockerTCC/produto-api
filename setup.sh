@@ -5,13 +5,17 @@ sudo apt update
 sudo apt upgrade -y
 
 # Instalar PostgreSQL e contribuições
-sudo apt install postgresql postgresql-contrib -y
+#sudo apt install postgresql postgresql-contrib -y
+
+chmod +x install-postgres-94.sh
+
+./install-postgres-94.sh
 
 #Verificar se está em execução
 systemctl status postgresql
 
 # Configurar senha do usuário postgres
-sudo -i -u postgres psql -c "ALTER USER postgres PASSWORD 'postgres';"
+#sudo -i -u postgres psql -c "ALTER USER postgres PASSWORD 'postgres';"
 
 # Instalar JDK 17
 sudo apt install openjdk-17-jdk -y

@@ -17,7 +17,7 @@ services:
     depends_on:
       - postgres-service
     ports:
-      - "80:8080"
+      - "80:80"
     restart: unless-stopped
   postgres-service:
     image: postgres:9.4-alpine

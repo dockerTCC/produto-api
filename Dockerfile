@@ -8,6 +8,6 @@ RUN mvn clean package -DskipTests && chmod +x /app/target/produto-api-1.0-SNAPSH
 # estágio 2: deploy
 FROM openjdk:17.0.2-slim AS deploy
 WORKDIR /app
-EXPOSE 8080
+EXPOSE 80
 COPY --from=build /app/target/produto-api-1.0-SNAPSHOT.jar produto-api.jar
 ENTRYPOINT ["java", "-jar", "produto-api.jar"]
