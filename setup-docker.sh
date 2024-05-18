@@ -13,7 +13,7 @@ NUM_INSTANCIAS=$1
 start_time=$(date +%s)
 
 # Comando para escalar as instâncias
-docker-compose up --scale api=$NUM_INSTANCIAS -d
+docker-compose up --scale produto-service=$NUM_INSTANCIAS -d
 
 # Medir o tempo de fim
 end_time=$(date +%s)
