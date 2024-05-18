@@ -36,6 +36,8 @@ services:
       - "80:80"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - db-postgres-net
     depends_on:
       - produto-service
     restart: unless-stopped
