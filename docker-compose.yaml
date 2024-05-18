@@ -17,11 +17,10 @@ services:
     depends_on:
       - postgres-service
     ports:
-      - "80:80"
+      - "8080"
     restart: unless-stopped
   postgres-service:
     image: postgres:9.4-alpine
-    container_name: postgres-service
     environment:
       POSTGRES_PASSWORD: postgres
       POSTGRES_USER: postgres
@@ -31,4 +30,13 @@ services:
       - /usr/lib/postgres/data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
-    restart: always
+    restart: unless-stopped
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - postgres-service
+    restart: unless-stopped
