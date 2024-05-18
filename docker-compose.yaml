@@ -37,5 +37,5 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
     depends_on:
-      - postgres-service
+      - produto-service
     restart: unless-stopped
