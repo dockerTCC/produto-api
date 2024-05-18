@@ -10,14 +10,14 @@ fi
 NUM_INSTANCIAS=$1
 
 # Medir o tempo de início
-start_time=$(date +%s)
+start_time=$(date +%s%3N)
 
 # Comando para escalar as instâncias
 docker-compose up --scale produto-service=$NUM_INSTANCIAS -d
 
 # Medir o tempo de fim
-end_time=$(date +%s)
+end_time=$(date +%s%3N)
 
 # Calcular e exibir a duração
 duration=$((end_time - start_time))
-echo "Tempo total para escalar com Docker Compose: $duration segundos"
+echo "Tempo total para escalar $NUM_INSTANCIAS instâncias com Docker: $duration segundos e milisegundos"
