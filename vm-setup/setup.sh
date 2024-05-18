@@ -18,10 +18,8 @@ apt install maven
 #Istalar nginx
 chmod +x install-nginx.sh && ./install-nginx.sh
 
-cd ../
-
 # Gerar o produto-api.jar da aplicação, pulando os testes, apontando para perfil vm e Tornar arquivo .jar executável
-mvn clean package -DskipTests -Pvm && chmod +x target/produto-api-1.0-SNAPSHOT.jar
+mvn -f ../pom.xml clean package -DskipTests -Pvm && chmod +x target/produto-api-1.0-SNAPSHOT.jar
 
 # Tornar arquivo excutável e executar o comando de criação do service
 chmod +x setup-service.sh && ./setup-service.sh
@@ -31,5 +29,4 @@ end_time=$(date +%s%3N)
 
 # Calcular e exibir a duração
 duration=$((end_time - start_time))
-
-echo "Tempo total para subir o setup sem docker: $duration segundos e milisegundos"
+echo "Tempo total para subir o setup sem docker: $duration ms"

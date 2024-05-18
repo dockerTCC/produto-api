@@ -20,4 +20,4 @@ end_time=$(date +%s%3N)
 
 # Calcular e exibir a duração
 duration=$((end_time - start_time))
-echo "Tempo total para escalar $NUM_INSTANCIAS instâncias com Docker: $duration segundos e milisegundos"
+echo "Tempo total para escalar $NUM_INSTANCIAS instâncias com Docker: $duration ms"
