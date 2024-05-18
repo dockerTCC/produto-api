@@ -31,7 +31,4 @@ sudo systemctl start ${SERVICE_NAME}.service
 # Habilitar o serviço para iniciar automaticamente na inicialização
 sudo systemctl enable ${SERVICE_NAME}.service
 
-# Verificar o status do serviço
-sudo systemctl status ${SERVICE_NAME}.service
-
 echo "Serviço ${SERVICE_NAME} configurado e iniciado com sucesso!"
