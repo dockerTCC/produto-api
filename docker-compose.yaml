@@ -11,7 +11,6 @@ services:
     build:
       dockerfile: Dockerfile
       context: .
-    container_name: produto-service
     networks:
       - db-postgres-net
     depends_on:
