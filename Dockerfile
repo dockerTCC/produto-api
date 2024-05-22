@@ -10,6 +10,6 @@ FROM openjdk:17.0.2-slim AS deploy
 WORKDIR /app
 EXPOSE 80
 COPY --from=build /app/target/produto-api-1.0-SNAPSHOT.jar produto-api.jar
-COPY run_produto_api.sh run_produto_api.sh
+#COPY run_produto_api.sh run_produto_api.sh
 RUN chmod +x run_produto_api.sh
-ENTRYPOINT ["./run_produto_api.sh"]
+ENTRYPOINT ["java", "-jar", "produto-api.jar"]

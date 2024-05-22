@@ -13,7 +13,7 @@ sudo systemctl stop $SERVICE_NAME
 # Fazer pull do repositório
 git pull origin main
 # Build do projeto
-mvn -f ../pom.xml clean package -DskipTests
+mvn -f ../pom.xml clean package -DskipTests -Pvm
 chmod +x $TARGET_DIR/$JAR_NAME
 # Iniciar o serviço
 sudo systemctl start $SERVICE_NAME
