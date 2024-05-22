@@ -1,6 +1,7 @@
 package multiversa.edu.produtoapi.model.service;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.java.Log;
 import multiversa.edu.produtoapi.model.dto.ProdutoDTO;
 import multiversa.edu.produtoapi.model.entity.Produto;
 import multiversa.edu.produtoapi.model.repository.ProdutoRepository;
@@ -11,6 +12,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Log
 public class ProdutoServiceImpl implements ProdutoService{
 
     private final ProdutoRepository repository;
