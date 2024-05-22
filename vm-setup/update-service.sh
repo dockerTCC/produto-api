@@ -17,6 +17,11 @@ mvn -f ../pom.xml clean package -DskipTests -Pvm
 chmod +x $TARGET_DIR/$JAR_NAME
 # Iniciar o serviço
 sudo systemctl start $SERVICE_NAME
+# Aguardar até que o serviço esteja completamente iniciado
+echo "Aguardando o serviço iniciar completamente..."
+while ! sudo systemctl status $SERVICE_NAME | grep -q "Started ProdutoApiApplication"; do
+  sleep 1
+done
 # Tempo final
 END_TIME=$(date +%s%3N)
 # Calcular o tempo total de execução em milissegundos
