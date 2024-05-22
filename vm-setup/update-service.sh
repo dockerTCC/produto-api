@@ -5,7 +5,7 @@ SERVICE_NAME="produto-api.service"
 # Nome do jar gerado
 JAR_NAME="produto-api-1.0-SNAPSHOT.jar"
 # Diretório onde o jar é gerado
-TARGET_DIR="./target"
+TARGET_DIR="../target"
 # Tempo inicial
 START_TIME=$(date +%s%3N)
 # Parar o serviço
@@ -13,7 +13,7 @@ sudo systemctl stop $SERVICE_NAME
 # Fazer pull do repositório
 git pull origin main
 # Build do projeto
-mvn clean package -DskipTests
+mvn -f ../pom.xml clean package -DskipTests
 chmod +x $TARGET_DIR/$JAR_NAME
 # Iniciar o serviço
 sudo systemctl start $SERVICE_NAME
