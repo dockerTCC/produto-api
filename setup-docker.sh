@@ -6,6 +6,7 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
+git pull
 # Número de instâncias a escalar
 NUM_INSTANCIAS=$1
 
