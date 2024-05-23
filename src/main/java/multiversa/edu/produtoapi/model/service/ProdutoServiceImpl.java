@@ -27,7 +27,8 @@ public class ProdutoServiceImpl implements ProdutoService{
 
     @Override
     public List<Produto> buscarTodos() {
-        return repository.findAll();
+
+//        return repository.findAll();
     }
 
     @Override
