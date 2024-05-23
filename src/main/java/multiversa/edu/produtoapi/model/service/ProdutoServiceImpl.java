@@ -1,5 +1,6 @@
 package multiversa.edu.produtoapi.model.service;
 
+import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.java.Log;
 import multiversa.edu.produtoapi.model.dto.ProdutoDTO;
@@ -37,5 +38,10 @@ public class ProdutoServiceImpl implements ProdutoService{
     @Override
     public void deleteAll() {
         repository.deleteAll();
+    }
+
+    @PostConstruct
+    public void log(){
+        log.info("Serviço atualizado");
     }
 }
