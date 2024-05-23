@@ -11,5 +11,5 @@ WORKDIR /app
 EXPOSE 80
 COPY --from=build /app/target/produto-api-1.0-SNAPSHOT.jar produto-api.jar
 #COPY run_produto_api.sh run_produto_api.sh
-RUN chmod +x run_produto_api.sh
+RUN #chmod +x run_produto_api.sh
 ENTRYPOINT ["java", "-jar", "produto-api.jar"]
