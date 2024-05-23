@@ -18,7 +18,7 @@ wait_for_service_start() {
 git pull origin main
 # Build do projeto
 echo "Iniciando o build do projeto..."
-if mvn -f ../pom.xml clean package -DskipTests; then
+if mvn -f ../pom.xml clean package -DskipTests -Pvm; then
     echo "Build bem-sucedido."
 else
     echo "Falha no build. Não reiniciando o serviço."
