@@ -39,8 +39,8 @@ services:
     image: nginx:latest
     ports:
       - "80:80"
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
+#    volumes:
+#      - ./nginx.conf:/etc/nginx/nginx.conf
     networks:
       - nginx-net
     depends_on:
