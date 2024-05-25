@@ -4,6 +4,9 @@ networks:
   db-postgres-net:
     name: db-postgres-net
     driver: bridge
+  nginx-net:
+    name: nginx-net
+    driver: bridge
 
 services:
   produto-service:
@@ -13,6 +16,7 @@ services:
       context: .
     networks:
       - db-postgres-net
+      - nginx-net
     depends_on:
       - postgres-service
     ports:
@@ -37,7 +41,7 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
     networks:
-      - db-postgres-net
+      - nginx-net
     depends_on:
       - produto-service
     restart: unless-stopped
