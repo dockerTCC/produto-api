@@ -8,7 +8,7 @@ RUN mvn clean package -DskipTests && chmod +x /app/target/produto-api-1.0-SNAPSH
 # estágio 2: deploy
 FROM openjdk:17.0.2-slim AS deploy
 WORKDIR /app
-EXPOSE 80
+EXPOSE 8080
 COPY --from=build /app/target/produto-api-1.0-SNAPSHOT.jar produto-api.jar
 #COPY run_produto_api.sh run_produto_api.sh
 RUN #chmod +x run_produto_api.sh
