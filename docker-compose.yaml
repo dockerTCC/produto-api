@@ -11,6 +11,7 @@ networks:
 services:
   produto-service:
     image: produto-api
+    container_name: produto-service
     build:
       dockerfile: Dockerfile
       context: .
