@@ -13,8 +13,8 @@ server {
 
     server_name localhost;
 
-    location / {
-        proxy_pass http://localhost:8080;
+    location /produto-service {
+        proxy_pass http://44.196.178.218:8080/produto-api;
         proxy_set_header Host \$host;
         proxy_set_header X-Real-IP \$remote_addr;
         proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
